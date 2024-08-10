@@ -1,0 +1,15 @@
+name: sample workflow
+run-name: ${{ github.actor }} is calling this method
+on:
+  [push]
+jobs:
+  sample-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: new sample action
+        run: echo "new sample action"
+      - name: version checking
+        run: |
+              node -v
+              npm -v
+    
